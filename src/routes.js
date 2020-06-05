@@ -29,7 +29,7 @@ routes.get('/profile', celebrate({
     }).unknown()
 }), ProfileController.index);
 
-//query params
+//query params validation
 routes.get('/incidents', celebrate({
     [Segments.QUERY]: Joi.object().keys({
         page: Joi.number()
